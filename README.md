@@ -108,6 +108,29 @@ This project follows the algorithm-comparison aspect of that recommendation by e
 
 However, this exercise does not include external clinical validation or an assessment of clinical predictive gain.
 
+## Key Findings and Visualizations
+
+### 1. Actual vs Predicted Expression (Parity Plots)
+
+The parity plots compare the actual and predicted expression values for each regression model. The diagonal reference line represents perfect predictions.
+
+Ridge and Elastic Net showed relatively better predictive performance than Lasso and Linear Regression in this experiment.
+
+![Actual vs Predicted Expression](assets/parity_plots.png)
+
+### 2. Coefficient Distributions
+
+The coefficient distributions illustrate how the four regression approaches influence model coefficients.
+
+- **Lasso:** Retained 74 non-zero coefficients, producing the sparsest model.
+- **Ridge:** Retained all 1,000 coefficients while shrinking their magnitudes.
+- **Elastic Net:** Retained 964 non-zero coefficients.
+- **Linear Regression:** Retained all 1,000 coefficients without regularization.
+
+These results demonstrate the differences in coefficient shrinkage and sparsity across the models.
+
+![Coefficient Distributions](assets/coefficient_distributions.png)
+
 ## Technologies and Libraries
 
 - Python
